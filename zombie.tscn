@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://cjgq6te3juq8n"]
+
+[ext_resource type="Texture2D" uid="uid://nx1x35tdmdke" path="res://zombie grrrrr.kra-autosave.png" id="1_uiaus"]
+
+[sub_resource type="GDScript" id="GDScript_yf5fn"]
+script/source = "extends CharacterBody2D
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(61, 60)
+
+[node name="Node2D" type="Node2D" unique_id=97499028]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=887121718]
+rotation = -3.1415925
+scale = Vector2(0.08122328, 0.08122328)
+texture = ExtResource("1_uiaus")
+
+[node name="zombie" type="CharacterBody2D" parent="." unique_id=1671991764]
+script = SubResource("GDScript_yf5fn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="zombie" unique_id=1428242113]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_g4v7s")

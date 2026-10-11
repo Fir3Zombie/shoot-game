@@ -1,0 +1,213 @@
+[gd_scene format=3 uid="uid://bl1107xqbd47s"]
+
+[ext_resource type="PackedScene" uid="uid://bm7td7wwyyc6h" path="res://sprite_2d.tscn" id="2_i7s6n"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_oabld"]
+load_path = "res://.godot/imported/background.png-98289422cd7d93003950872a7b97021f.ctex"
+
+[sub_resource type="GDScript" id="GDScript_5s0fj"]
+script/source = "extends Area2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(_delta: float) -> void:
+	pass
+	
+	
+	
+	
+func _on_body_exited(body: Node2D) -> void:
+	if body.name == \"guy\":
+		body.friction = 1.1
+
+func _on_body_entered(body: Node2D) -> void:
+	if body.name == \"guy\":
+		body.friction =  1.5
+
+#func _on_body_exited(body: Node2D) -> void:
+		#if body.name == \"guy\":
+			#body.friction =  1.1
+	
+		
+	 # Replace with function body.
+"
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g4v7s"]
+radius = 68.73187
+height = 306.2484
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yf5fn"]
+radius = 64.009705
+height = 227.10167
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_57qmd"]
+radius = 58.2547
+height = 284.40692
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3gngh"]
+radius = 106.00159
+height = 302.54663
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7numd"]
+radius = 54.946716
+height = 259.59818
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p1u0y"]
+radius = 64.62805
+height = 133.84348
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_avnxn"]
+radius = 71.82176
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yf5fn"]
+radius = 54.120125
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_57qmd"]
+radius = 67.577156
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_d0u6y"]
+radius = 63.4128
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3gngh"]
+radius = 60.587006
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wgxnn"]
+radius = 51.037506
+height = 213.86932
+
+[sub_resource type="GDScript" id="GDScript_i7s6n"]
+script/source = "extends Area2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(97.759155, 848.83936)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yf5fn"]
+size = Vector2(1382.9735, 103.60325)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_57qmd"]
+size = Vector2(133.31012, 849.0164)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d0u6y"]
+size = Vector2(1383.3271, 101.961975)
+
+[node name="Node2D" type="Node2D" unique_id=161354567]
+position = Vector2(6473, 3639)
+scale = Vector2(-5.646536, -5.646536)
+
+[node name="guy" parent="." unique_id=364465354 instance=ExtResource("2_i7s6n")]
+position = Vector2(3620, 1890)
+
+[node name="Camera2D" type="Camera2D" parent="guy" unique_id=708300227]
+position = Vector2(56, 28)
+scale = Vector2(0.99813116, 0.9719888)
+zoom = Vector2(0.5, 0.5)
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
+rotation_smoothing_enabled = true
+rotation_smoothing_speed = 3.0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=811351663]
+position = Vector2(575.4583, 323.625)
+scale = Vector2(0.6005642, 0.5969907)
+texture = SubResource("CompressedTexture2D_oabld")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1522712638]
+script = SubResource("GDScript_5s0fj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=341281127]
+position = Vector2(253.78394, 260.51376)
+rotation = 0.86287487
+shape = SubResource("CapsuleShape2D_g4v7s")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" unique_id=240643564]
+position = Vector2(936.68054, 518.3709)
+rotation = -1.3258494
+scale = Vector2(1.0058897, 1.0005243)
+shape = SubResource("CapsuleShape2D_yf5fn")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D" unique_id=1800788753]
+position = Vector2(614.5361, 367.30484)
+rotation = 0.54207826
+shape = SubResource("CapsuleShape2D_57qmd")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Area2D" unique_id=609185435]
+position = Vector2(160.98367, 625.69336)
+rotation = -1.9151332
+shape = SubResource("CapsuleShape2D_3gngh")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Area2D" unique_id=1666309592]
+position = Vector2(933.49274, 179.75626)
+rotation = 1.0691288
+shape = SubResource("CapsuleShape2D_7numd")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Area2D" unique_id=1730011869]
+position = Vector2(511.1098, 428.22714)
+shape = SubResource("CapsuleShape2D_p1u0y")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Area2D" unique_id=1104346892]
+position = Vector2(151.42026, 235.18842)
+shape = SubResource("CircleShape2D_avnxn")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Area2D" unique_id=1533891643]
+position = Vector2(989.9875, 209.15479)
+shape = SubResource("CircleShape2D_yf5fn")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Area2D" unique_id=2039419631]
+position = Vector2(296.2878, 275.213)
+shape = SubResource("CircleShape2D_57qmd")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Area2D" unique_id=932876342]
+position = Vector2(270.0771, 218.89526)
+shape = SubResource("CircleShape2D_d0u6y")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Area2D" unique_id=1063346212]
+position = Vector2(325.1551, 251.6587)
+shape = SubResource("CircleShape2D_3gngh")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="Area2D" unique_id=1056746076]
+position = Vector2(908.52167, 495.34793)
+rotation = 1.214644
+shape = SubResource("CapsuleShape2D_wgxnn")
+
+[node name="Area2D2" type="Area2D" parent="." unique_id=1606913810]
+script = SubResource("GDScript_i7s6n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=934692072]
+position = Vector2(-49.94214, 321.70166)
+scale = Vector2(0.9999994, 0.9999994)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D2" unique_id=1821317897]
+position = Vector2(592.84106, -50.739014)
+scale = Vector2(0.9999989, 0.9999989)
+shape = SubResource("RectangleShape2D_yf5fn")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D2" unique_id=1230714375]
+position = Vector2(1217.672, 322.32144)
+scale = Vector2(0.99999934, 0.99999934)
+shape = SubResource("RectangleShape2D_57qmd")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Area2D2" unique_id=118552290]
+position = Vector2(592.48694, 695.97736)
+scale = Vector2(0.9999992, 0.9999992)
+shape = SubResource("RectangleShape2D_d0u6y")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D" to="Area2D" method="_on_body_exited"]
+[connection signal="body_entered" from="Area2D2" to="guy" method="_on_area_2d_2_body_entered"]
